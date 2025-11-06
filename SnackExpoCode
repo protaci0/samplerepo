@@ -1,0 +1,92 @@
+import React from 'react';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.card}>
+        <Text style={styles.title}>Student Profile</Text>
+
+        <Text style={styles.name}>Robb Maiquez</Text>
+        <Text style={styles.course}>BSCS 3-4</Text>
+
+        <View style={styles.section}>
+          <Text style={styles.label}>Age:</Text>
+          <Text style={styles.text}>21</Text>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.label}>About Me:</Text>
+          <Text style={styles.text}>
+            I’m a Computer Science student still learning new technologies
+            and developing creative software solutions.
+          </Text>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.label}>Achievements:</Text>
+          <Text style={styles.text}>Create my first game (2020)</Text>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.label}>Skills:</Text>
+          <Text style={styles.text}>• Python</Text>
+          <Text style={styles.text}>• Lua</Text>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#E9F1FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  card: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
+    padding: 25,
+    width: '90%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3,
+    elevation: 5,
+  },
+  title: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#004AAD',
+    textAlign: 'center',
+    marginBottom: 15,
+  },
+  name: {
+    fontSize: 22,
+    fontWeight: '600',
+    color: '#333333',
+    textAlign: 'center',
+  },
+  course: {
+    fontSize: 16,
+    color: '#666666',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  section: {
+    marginBottom: 12,
+  },
+  label: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    color: '#004AAD',
+  },
+  text: {
+    fontSize: 15,
+    color: '#333333',
+    marginLeft: 10,
+  },
+});
